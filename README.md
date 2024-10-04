@@ -32,11 +32,11 @@ pip install torch diffusers transformers accelerate opencv-python Pillow matplot
 # Setup
 
 1. Clone the repository:
-git clone https://github.com/your_username/text-conditioned-object-placement.git
-cd text-conditioned-object-placement
+   git clone https://github.com/your_username/text-conditioned-object-placement.git
+   cd text-conditioned-object-placement
 
 2. Install the required packages:
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 3. Download the Stable Diffusion model: The script uses the Stable Diffusion model from HuggingFace, specifically CompVis/stable-diffusion-v1-4. You don't need to manually download it, as it will be fetched automatically.
 
@@ -76,8 +76,8 @@ Description: The final composite image, with a resized product image and adjuste
 
 # Customization
 
-Prompt: Modify the scene_prompt to create different backgrounds.
-Positioning and Resizing: Adjust the placement coordinates (placement_x, placement_y) and the resize_factor to control where and how large the product appears on the background.
+1. Prompt: Modify the scene_prompt to create different backgrounds.
+2. Positioning and Resizing: Adjust the placement coordinates (placement_x, placement_y) and the resize_factor to control where and how large the product appears on the background.
 
 # Successful Experiment Images:
 
@@ -133,10 +133,10 @@ The result was a combined image with the object seamlessly placed into the gener
 
 5. Using a Different Product Image
 If you want to use a different product image for object placement, you need to change the image path in the following sections of the code:
-#Set the path to the new product image
+#Set the path to the new product image,
 product_image = Image.open('path_to_your_new_product_image.png')
 
-#Ensure the new image is passed into the object extraction function
+#Ensure the new image is passed into the object extraction function,
 product_no_bg = remove_white_background(product_image)
 
 Make sure the path to the new image is correct and replace it in the code where required. Similarly, you can modify the text prompt for generating a different background scene.
@@ -149,8 +149,8 @@ Final Combined Image: The product was placed onto the generated scene.
 Final Combined Image Realistic: Further refinement for realistic scaling and positioning of the object.
 
 7. Displaying the image:
-plt.imshow(final_image)
-plt.show()
+   plt.imshow(final_image)
+   plt.show()
 
 # Contribution
 
