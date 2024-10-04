@@ -22,27 +22,27 @@ pip install torch diffusers transformers accelerate opencv-python Pillow matplot
 
 # Key Libraries:
 
-torch: Used for handling the Stable Diffusion model.
-diffusers: Provides the interface for the Stable Diffusion pipeline.
-opencv-python: To handle image processing and manipulation.
-Pillow: For handling image files and operations (like removing the background).
-matplotlib: For displaying the images at each key step.
-numpy: For array operations when modifying image data.
+1. torch: Used for handling the Stable Diffusion model.
+2. diffusers: Provides the interface for the Stable Diffusion pipeline.
+3. opencv-python: To handle image processing and manipulation.
+4. Pillow: For handling image files and operations (like removing the background).
+5. matplotlib: For displaying the images at each key step.
+6. numpy: For array operations when modifying image data.
 
 # Setup
 
-Clone the repository:
+1. Clone the repository:
 git clone https://github.com/your_username/text-conditioned-object-placement.git
 cd text-conditioned-object-placement
 
-Install the required packages:
+2. Install the required packages:
 pip install -r requirements.txt
 
-Download the Stable Diffusion model: The script uses the Stable Diffusion model from HuggingFace, specifically CompVis/stable-diffusion-v1-4. You don't need to manually download it, as it will be fetched automatically.
+3. Download the Stable Diffusion model: The script uses the Stable Diffusion model from HuggingFace, specifically CompVis/stable-diffusion-v1-4. You don't need to manually download it, as it will be fetched automatically.
 
-Prepare your product image: Place your product image (with a white background) in the project folder. Update the image path in the script if necessary.
+4. Prepare your product image: Place your product image (with a white background) in the project folder. Update the image path in the script if necessary.
 
-Modify the prompt for scene generation: In the script, customize the scene_prompt variable to describe the kind of background you want to generate, e.g., "A dense forest with sunlight filtering through the trees.".
+5. Modify the prompt for scene generation: In the script, customize the scene_prompt variable to describe the kind of background you want to generate, e.g., "A dense forest with sunlight filtering through the trees.".
 
 # Usage
 
@@ -98,11 +98,11 @@ Positioning and Resizing: Adjust the placement coordinates (placement_x, placeme
 1. Environment Setup and Installing Necessary Libraries:
 To execute the project, we first installed the following libraries to handle image generation, processing, and model inference:
 
-torch and torchvision: For deep learning framework and model handling.
-transformers and diffusers: To work with Hugging Face's models for stable diffusion and text-to-image generation.
-opencv-python: For image processing and contour detection.
-Pillow: For image manipulation and combining images.
-accelerate: For hardware acceleration
+1. torch and torchvision: For deep learning framework and model handling.
+2. transformers and diffusers: To work with Hugging Face's models for stable diffusion and text-to-image generation.
+3. opencv-python: For image processing and contour detection.
+4. Pillow: For image manipulation and combining images.
+5. accelerate: For hardware acceleration
 
 Installing these libraries provided the required environment for generating images from text and processing product images.
 
