@@ -131,14 +131,24 @@ final_image = overlay_images(background_image, product_no_bg, position=(placemen
 
 The result was a combined image with the object seamlessly placed into the generated scene, such as a kitchen shelf.
 
-5. Saving and Viewing the Images at Each Step:
+5. Using a Different Product Image
+If you want to use a different product image for object placement, you need to change the image path in the following sections of the code:
+# Set the path to the new product image
+product_image = Image.open('path_to_your_new_product_image.png')
+
+# Ensure the new image is passed into the object extraction function
+product_no_bg = remove_white_background(product_image)
+
+Make sure the path to the new image is correct and replace it in the code where required. Similarly, you can modify the text prompt for generating a different background scene.
+
+6. Saving and Viewing the Images at Each Step:
 At each stage of the process, we saved and displayed the images to monitor progress and ensure the solution was functioning correctly.
 
 Important Parts: Extracted the object with transparent background, ready for integration.
 Final Combined Image: The product was placed onto the generated scene.
 Final Combined Image Realistic: Further refinement for realistic scaling and positioning of the object.
 
-Displaying the image:
+7. Displaying the image:
 plt.imshow(final_image)
 plt.show()
 
