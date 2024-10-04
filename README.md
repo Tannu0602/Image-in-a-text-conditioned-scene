@@ -4,7 +4,7 @@
 
 The goal of this project is to place an object’s image into a generated scene using a text prompt. Specifically, the user can generate a background scene using a pre-trained Stable Diffusion model and then overlay a product image (with the background removed) onto that generated scene at a chosen position. This process allows for generating customized, realistic product mockups in various backgrounds based on user-defined prompts.
 
-#Project Overview
+# Project Overview
 
 The project involves:
 
@@ -13,14 +13,14 @@ The project involves:
 3. Overlaying the product onto the generated background at a specified position and resizing it for realism.
 4. Visualizing and saving the images at each step of the process to ensure clarity and success.
 
-#Requirements
+# Requirements
 
-#Dependencies
+# Dependencies
 
 To run the project, the following Python packages need to be installed:
 pip install torch diffusers transformers accelerate opencv-python Pillow matplotlib numpy
 
-#Key Libraries:
+# Key Libraries:
 
 torch: Used for handling the Stable Diffusion model.
 diffusers: Provides the interface for the Stable Diffusion pipeline.
@@ -29,7 +29,7 @@ Pillow: For handling image files and operations (like removing the background).
 matplotlib: For displaying the images at each key step.
 numpy: For array operations when modifying image data.
 
-#Setup
+# Setup
 
 Clone the repository:
 git clone https://github.com/your_username/text-conditioned-object-placement.git
@@ -44,7 +44,7 @@ Prepare your product image: Place your product image (with a white background) i
 
 Modify the prompt for scene generation: In the script, customize the scene_prompt variable to describe the kind of background you want to generate, e.g., "A dense forest with sunlight filtering through the trees.".
 
-#Usage
+# Usage
 
 Run the script:
 python main.py
@@ -57,7 +57,7 @@ The script performs the following steps:
 4. Displays and saves images after each key step (background generation, background removal, and final combination).
 5. Save the output: The final combined image is saved as final_combined_image_realistic.png.
 
-#Images Generated at Each Step
+# Images Generated at Each Step
 
 1. Important Parts (important_parts.png):
 This image shows the steps of the background removal and scene generation processes. It helps visualize the intermediate outputs that are critical for understanding the final result.
@@ -74,12 +74,12 @@ This is the final, fine-tuned output after the product image has been resized an
 
 Description: The final composite image, with a resized product image and adjusted positioning for better realism, such as matching shadows and perspectives.
 
-#Customization
+# Customization
 
 Prompt: Modify the scene_prompt to create different backgrounds.
 Positioning and Resizing: Adjust the placement coordinates (placement_x, placement_y) and the resize_factor to control where and how large the product appears on the background.
 
-#Successful Experiment Images:
+# Successful Experiment Images:
 
 ![final_combined_image_realistic1](https://github.com/user-attachments/assets/00007276-ce3a-4f09-829f-ffad767b3777)
 
@@ -87,13 +87,13 @@ Positioning and Resizing: Adjust the placement coordinates (placement_x, placeme
 
 ![final_combined_image_realistic4](https://github.com/user-attachments/assets/2265337e-6835-40af-8dd7-dce4957633cd)
 
-Failed Experiment Images:
+# Failed Experiment Images:
 
 ![final_combined_image_realistic3](https://github.com/user-attachments/assets/39964627-f5e9-4d2e-8436-e42541a8dcb3)
 
 ![final_combined_image_realistic5](https://github.com/user-attachments/assets/4ca5b9e3-82b6-46ab-9671-9eccc0680d4b)
 
-#Approach Breakdown:
+# Approach Breakdown:
 
 1. Environment Setup and Installing Necessary Libraries:
 To execute the project, we first installed the following libraries to handle image generation, processing, and model inference:
@@ -133,10 +133,10 @@ The result was a combined image with the object seamlessly placed into the gener
 
 5. Using a Different Product Image
 If you want to use a different product image for object placement, you need to change the image path in the following sections of the code:
-Set the path to the new product image.
+#Set the path to the new product image
 product_image = Image.open('path_to_your_new_product_image.png')
 
-Ensure the new image is passed into the object extraction function.
+#Ensure the new image is passed into the object extraction function
 product_no_bg = remove_white_background(product_image)
 
 Make sure the path to the new image is correct and replace it in the code where required. Similarly, you can modify the text prompt for generating a different background scene.
@@ -152,6 +152,6 @@ Final Combined Image Realistic: Further refinement for realistic scaling and pos
 plt.imshow(final_image)
 plt.show()
 
-#Contribution
+# Contribution
 
 Contributions are welcome! If you'd like to improve the project, please fork the repository and submit a pull request.
